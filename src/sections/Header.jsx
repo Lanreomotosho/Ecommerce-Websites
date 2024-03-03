@@ -36,10 +36,18 @@ const Header = () => {
   const navItems = {
     {
       link: 'Home', path:'home'
-    }
+    },
     {
       link: 'Home', path:'home'
-    }
+    },
+    {
+      link: 'Home', path:'home'
+    },
+  }
+  {
+    link: 'Home', path:'home'
+  },
+}
   }
   return (
     <div>Header Lanre</div>
