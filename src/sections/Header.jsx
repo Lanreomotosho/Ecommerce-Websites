@@ -27,11 +27,20 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  
+  //this  one is optional
   const closeMenu = () => {
     setIsMenuOpen(false);
   }
 
-  //this  one is optional
+  const navItems = {
+    {
+      link: 'Home', path:'home'
+    }
+    {
+      link: 'Home', path:'home'
+    }
+  }
   return (
     <div>Header Lanre</div>
   )
