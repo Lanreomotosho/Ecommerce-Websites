@@ -33,24 +33,33 @@ const Header = () => {
     setIsMenuOpen(false);
   }
 
-  const navItems = {
+  const navItems = [
     {
       link: 'Home', path:'home'
     },
     {
-      link: 'Home', path:'home'
+      link: 'Collections', path:'collections'
     },
     {
-      link: 'Home', path:'home'
+      link: 'Products', path:'products'
     },
-  }
   {
-    link: 'Home', path:'home'
+    link: 'Blogs', path:'blogs'
   },
-}
-  }
+  {
+    link: 'Contact', path:'contact'
+  },
+]
+
+
   return (
-    <div>Header Lanre</div>
+ <nav className={`${darkMode ? 'dark bg-black' : 'light bg-white'} w-full flex 
+ lg:flex-col flex-row justify-between items-center gap-4 lg:px-20 px-6 lg:py-1 
+ lg:static sticky top-0 z-[999]`}>
+  <div id='top' className='relative w-full flex justify-center items-center'>
+    <img src='{sitelogo}' alt="" />
+  </div>
+ </nav>
   )
 }
 
