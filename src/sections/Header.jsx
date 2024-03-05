@@ -52,15 +52,70 @@ const Header = () => {
 ]
 
 
-  return (
+return (
  <nav className={`${darkMode ? 'dark bg-black' : 'light bg-white'} w-full flex 
  lg:flex-col flex-row justify-between items-center gap-4 lg:px-20 px-6 lg:py-1 
  lg:static sticky top-0 z-[999]`}>
   <div id='top' className='relative w-full flex justify-center items-center'>
-    <img src='{sitelogo}' alt="" />
+    <img data-aos="zoom-in"  src='{sitelogo}' alt="site logo" className='lg:w[400px] lg:h-[200px]
+    h-[100px] dark:filter dark:invert'/>
+    <div data-aos="zoom-in" id='header-icons' className='lg:flex hidden
+    justify-center items-center gap-8 absolute top-24 right-0 dark:text-white'>
+    <IoSearch className='w-[25px] h-[25px] transform hover:scale-125 transition-transform
+    duration-300 curson-pointer'/>
+     <IoPersonAddOutline className='w-[25px] h-[25px] transform hover:scale-125 transition-transform
+    duration-300 curson-pointer'/>
+     <FaRegHeart className='w-[25px] h-[25px] transform hover:scale-125 transition-transform
+    duration-300 curson-pointer'/>
+     <FiShoppingCart className='w-[25px] h-[25px] transform hover:scale-125 transition-transform
+    duration-300 curson-pointer'/>
+    <div className='bg-black dark:bg-white dark:text-black px-3 py-1 text-white
+    rounded-full absolute -top[25px] -right-[20px] text-sm'>2
+    </div>
+    </div>
   </div>
- </nav>
-  )
+
+  <div data-aos="zoom-in" id='menus section' className='w-full pb-5 flex
+  lg:justify-center justify-end items-center sticky top-0 left-0 h-fit bg-white
+  dark:bg-black'>
+
+<ul className='lg:flex justify-center items-center gap-10 hidden'>
+  {
+    navItems.map(({Link, path }) => (
+      <link key={path} className='text-black uppercase font-semibold 
+      cursor-pointer p-3 rounded-lg hover:bg-black dark:hover:bg-white 
+      dark:hover:text-black hover:text-white dark:text-white' to={path} 
+      spy={true} offset={-100} smooth={true}>(Link)
+      </link>
+    ))
+  }
+</ul>
+
+{/* mobile menu starts here */}
+<div className='flex justify-center items-center lg:hidden mt-5'
+onClick={toggleMenu}>
+
+
+{isMenuOpen ? <FaXmark className='text-black text-3x1 dark:text-white 
+cursor-pointer' /> : <FaBars className='text-black text-3x1 dark:text-white 
+cursor-pointer' />}
+</div>
+  </div>
+
+  <div className={`${isMenuOpen ? 'flex' : 'hidden'} w-full h-fit bg-slate-800
+  p-4 absolute top-[80px] left-0`}>
+    <ul className='flex flex-col justify-center items-center pag-2 w-full'>
+      {
+        navItems.map(( {Link, path})=>(
+          <Link key={path} className='text-white uppercase font-semibold cursor-pointer
+          p-3 rounded-lg hover:bg-yellow-500 hover:text-black w-full text-center'>{Link}</Link>
+        ))
+      }
+    </ul>
+
+  </div>
+  </nav>
+)
 }
 
 export default Header
