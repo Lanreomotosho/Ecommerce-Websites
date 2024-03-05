@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import sitelogo from '../assets/clients/sitelogo.svg'
-import { IoSearch, IoPersonAddOutline } from 'react-icons/io5'
-import { FiShoppingCart } from 'react-icons/fa'
-import { FaRegHeart } from 'react-icons/fa'
-import { Link } from 'react-scroll'
-import { FaXmark, FaBars } from 'react-icons/fa6'
-import { useDarkMode } from '../Components/DarkmodeContext'
+import React, { useEffect, useState } from 'react';
+import sitelogo from '../assets/clients/sitelogo.svg';
+import { IoSearch, IoPersonAddOutline } from 'react-icons/io5';
+import { FiShoppingCart } from "react-icons/fi";
+import { FaRegHeart } from 'react-icons/fa';
+import { Link } from 'react-scroll';
+import { FaXmark, FaBars } from 'react-icons/fa6';
+import { useDarkMode } from '../Components/DarkmodeContext';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -67,7 +67,7 @@ return (
     duration-300 curson-pointer'/>
      <FaRegHeart className='w-[25px] h-[25px] transform hover:scale-125 transition-transform
     duration-300 curson-pointer'/>
-     <FiShoppingCart className='w-[25px] h-[25px] transform hover:scale-125 transition-transform
+     <FiShoppingCart  className='w-[25px] h-[25px] transform hover:scale-125 transition-transform
     duration-300 curson-pointer'/>
     <div className='bg-black dark:bg-white dark:text-black px-3 py-1 text-white
     rounded-full absolute -top[25px] -right-[20px] text-sm'>2
