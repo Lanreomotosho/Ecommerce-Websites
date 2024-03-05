@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import sitelogo from '../assets/clients/sitelogo.svg';
 import { IoSearch, IoPersonAddOutline } from 'react-icons/io5';
-import { FiShoppingCart } from "react-icons/fi";
+import { FiShoppingCart } from "react-icons/fa";
 import { FaRegHeart } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 import { FaXmark, FaBars } from 'react-icons/fa6';
@@ -27,7 +27,6 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   }
 
-  
   //this  one is optional
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -56,22 +55,27 @@ return (
  <nav className={`${darkMode ? 'dark bg-black' : 'light bg-white'} w-full flex 
  lg:flex-col flex-row justify-between items-center gap-4 lg:px-20 px-6 lg:py-1 
  lg:static sticky top-0 z-[999]`}>
+
   <div id='top' className='relative w-full flex justify-center items-center'>
     <img data-aos="zoom-in"  src='{sitelogo}' alt="site logo" className='lg:w[400px] lg:h-[200px]
     h-[100px] dark:filter dark:invert'/>
+
     <div data-aos="zoom-in" id='header-icons' className='lg:flex hidden
     justify-center items-center gap-8 absolute top-24 right-0 dark:text-white'>
     <IoSearch className='w-[25px] h-[25px] transform hover:scale-125 transition-transform
     duration-300 curson-pointer'/>
+
      <IoPersonAddOutline className='w-[25px] h-[25px] transform hover:scale-125 transition-transform
     duration-300 curson-pointer'/>
+
      <FaRegHeart className='w-[25px] h-[25px] transform hover:scale-125 transition-transform
     duration-300 curson-pointer'/>
+
      <FiShoppingCart  className='w-[25px] h-[25px] transform hover:scale-125 transition-transform
     duration-300 curson-pointer'/>
+
     <div className='bg-black dark:bg-white dark:text-black px-3 py-1 text-white
-    rounded-full absolute -top[25px] -right-[20px] text-sm'>2
-    </div>
+    rounded-full absolute -top[25px] -right-[20px] text-sm'>2</div>
     </div>
   </div>
 
@@ -90,17 +94,19 @@ return (
     ))
   }
 </ul>
+</div>
 
 {/* mobile menu starts here */}
 <div className='flex justify-center items-center lg:hidden mt-5'
 onClick={toggleMenu}>
 
-
+<div>
 {isMenuOpen ? <FaXmark className='text-black text-3x1 dark:text-white 
 cursor-pointer' /> : <FaBars className='text-black text-3x1 dark:text-white 
 cursor-pointer' />}
 </div>
-  </div>
+</div>
+
 
   <div className={`${isMenuOpen ? 'flex' : 'hidden'} w-full h-fit bg-slate-800
   p-4 absolute top-[80px] left-0`}>
@@ -112,7 +118,6 @@ cursor-pointer' />}
         ))
       }
     </ul>
-
   </div>
   </nav>
 )
